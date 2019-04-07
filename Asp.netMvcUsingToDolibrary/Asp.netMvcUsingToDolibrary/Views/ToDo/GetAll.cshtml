@@ -1,0 +1,28 @@
+﻿@model Asp.netMvcUsingToDolibrary.Models.ToDo[]
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GetAll</title>
+
+    @for (int i = 0; i < Model.Length; i++)
+    {
+
+      <p>  @Model[i].Discretion</p>
+    }
+
+</head>
+<body>
+    <div>
+    </div>
+</body>
+</html>
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
