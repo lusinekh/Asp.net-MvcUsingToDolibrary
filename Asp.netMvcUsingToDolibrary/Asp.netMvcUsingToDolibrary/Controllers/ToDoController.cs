@@ -16,7 +16,6 @@ namespace Asp.netMvcUsingToDolibrary.Controllers
         // GET: ToDo
         public ActionResult Index()
         {
-
             var ToDoItem = from e in GetToDoList
                            orderby e.ID
                            select e;
@@ -25,21 +24,17 @@ namespace Asp.netMvcUsingToDolibrary.Controllers
         }
         public ActionResult Completed()
         {
-
             var result = from e in GetToDoList
                          where e.IsDone == true
                          select e;
             return View(result);
-
         }
         public ActionResult Active()
         {
-
             var result = from e in GetToDoList
                          where e.IsDone == false
                          select e;
             return View(result);
-
         }
         public ActionResult GetAll()
         {
@@ -75,14 +70,11 @@ namespace Asp.netMvcUsingToDolibrary.Controllers
             {
                 return View();
             }
-
         }
 
         // GET: ToDo/Edit/5
         public ActionResult Edit(int id)
         {
-
-
             var item = GetToDoList.Single(m => m.ID == id);
             return View(item);
         }
@@ -95,7 +87,6 @@ namespace Asp.netMvcUsingToDolibrary.Controllers
             {
                 var itm = GetToDoList.Single(m => m.ID == id);
 
-
                 if (TryUpdateModel(itm))
                 {
 
@@ -103,7 +94,6 @@ namespace Asp.netMvcUsingToDolibrary.Controllers
                 }
                 // TODO: Add update logic here
                 return View(itm);
-
             }
             catch
             {

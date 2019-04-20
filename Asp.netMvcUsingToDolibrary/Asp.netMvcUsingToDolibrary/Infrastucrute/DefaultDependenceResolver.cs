@@ -10,13 +10,10 @@ namespace Asp.netMvcUsingToDolibrary.Infrastucrute
     public class DefaultDependenceResolver : IDependencyResolver
     {
         IKernel kernel;
-
         public void AddBind()
         {
 
-
         }
-
         public object GetService(Type serviceType)
         {
             throw new NotImplementedException();
